@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Inquiry Form</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 8px;
+        }
+        input, textarea, button, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		.confidentiality-note {
+			margin-top: 10px;
+			background: #f8f9fa;
+			border-left: 4px solid #007bff;
+			padding: 12px 18px;
+			border-radius: 6px;
+			font-size: 0.8em;      /* smaller, more refined font */
+			color: #444;
+			line-height: 1.4em;
+			font-style: italic;      /* gives it a soft, professional tone */
+		}
+
+		.confidentiality-note strong {
+			color: #007bff;
+			font-style: normal;      /* make the key parts (like company name) stand out */
+		}
+
+		.confidentiality-note p {
+			margin: 0;
+		}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="../index.html" class="logo-container">
+                    <img src="../Logo.PNG" alt="ManuSync Logo" class="logo">
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="../MenuNavgation/fixtures.html">Fixtures</a>
+                        <div class="nav-preview">
+                            <h4>Fixtures</h4>
+                            <p>Precision jigs and fixtures designed for high accuracy and stability in machining operations.</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../MenuNavgation/fabrication.html">Fabrication</a>
+                        <div class="nav-preview">
+                            <h4>Fabrication</h4>
+                            <p>High-quality sheet metal and structural fabrication solutions built for industrial reliability.</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../MenuNavgation/toolroomdie.html">Tool Room Die</a>
+                        <div class="nav-preview">
+                            <h4>Tool Room Die</h4>
+                            <p>Custom dies and molds built with precision to support complex manufacturing requirements.</p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../MenuNavgation/machiningparts.html">Machining Parts</a>
+                        <div class="nav-preview">
+                            <h4>Machining Parts</h4>
+                            <p>Engineered machining components delivering performance, durability, and perfect fit.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container form-container">
+                <h2>Manufacturing Inquiry Form</h2>
+                <form action="https://formsubmit.co/globalmanusync@gmail.com" method="POST" enctype="multipart/form-data">
+                    <!-- HIDDEN FIELDS -->
+                    <input type="hidden" name="_subject" value="New Manufacturing Inquiry">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+
+                    <label>Company Name:</label>
+                    <input type="text" name="company_name" required>
+
+                    <label>Project or Part Name:</label>
+                    <input type="text" name="project_name" required>
+
+                    <!-- NEW DROPDOWN ADDED -->
+                    <label>Select Operation:</label>
+                    <select name="operation_type" required>
+                        <option value="">-- Select Operation --</option>
+                        <option value="Fixtures">Fixtures</option>
+                        <option value="Fabrication">Fabrication</option>
+                        <option value="Tool Room Die">Tool Room Die</option>
+                        <option value="Machining Parts">Machining Parts</option>
+                    </select>
+                    <!-- END DROPDOWN -->
+
+                    <label>Email Address:</label>
+                    <input type="email" name="email" required>
+
+                    <label>Upload Drawing (PDF or DOC):</label>
+                    <input type="file" name="drawing" accept=".pdf,.doc,.docx" required>
+
+                    <label>Contact Name:</label>
+                    <input type="text" name="contact_name" required>
+
+                    <label>Contact Number:</label>
+                    <input type="text" name="contact_number" required>
+ <div class="confidentiality-note">
+        <p>
+            🔒 <strong>Confidentiality Assurance:</strong> We respect and protect the confidentiality of your designs and documents.  
+           Feel free to submit your files with complete confidence that your information is secure.
+        </p>
+    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ManuSync. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
